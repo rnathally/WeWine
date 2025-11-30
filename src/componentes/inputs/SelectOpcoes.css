@@ -1,0 +1,136 @@
+/* CONTAINER GERAL DO SELECT */
+.ds-select {
+  position: relative;
+  font-family: inherit;
+  /* a width vem via style (largura="100%"), então não mexo aqui */
+}
+
+/* ÁREA VISÍVEL (como se fosse o input) */
+.ds-select-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--borda, #e1e1e1);
+  background: #fafafa;
+
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.ds-select:hover .ds-select-display {
+  background: #f0f0f0;
+}
+
+.ds-select:focus-within .ds-select-display {
+  border-color: var(--primaria, #89154c);
+  box-shadow: 0 0 0 2px rgba(137, 21, 76, 0.25);
+  background: #fff;
+}
+
+/* ÍCONE À ESQUERDA (OPCIONAL) */
+.ds-select-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaria, #89154c);
+  font-size: 0.95rem;
+}
+
+/* TEXTO */
+.ds-select-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-select-text.ativo {
+  color: #333;
+  font-weight: 500;
+}
+
+/* SETINHA */
+.arrow {
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+  color: #777;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* DROPDOWN */
+.ds-select-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e4d5da;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.06),
+    0 14px 30px rgba(0, 0, 0, 0.04);
+
+  max-height: 230px;
+  overflow-y: auto;
+}
+
+/* ITEM DA LISTA */
+.ds-select-item {
+  padding: 8px 12px 8px 34px;
+  font-size: 0.88rem;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.ds-select-item:hover {
+  background: #faf5f7; /* rosê clarinho */
+}
+
+/* ITEM SELECIONADO */
+.ds-select-item.ativo {
+  background: rgba(137, 21, 76, 0.06);
+  color: #89154c;
+  font-weight: 600;
+}
+
+/* CHECKZINHO DO LADO ESQUERDO */
+.ds-select-item .check {
+  position: absolute;
+  left: 10px;
+  color: #89154c;
+}
+
+/* AJUSTE EM TELAS MENORES */
+@media (max-width: 700px) {
+  .ds-select-display {
+    padding: 9px 10px;
+  }
+
+  .ds-select-item {
+    padding: 8px 10px 8px 30px;
+  }
+}

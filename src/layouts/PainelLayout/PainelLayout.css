@@ -1,0 +1,34 @@
+/* LAYOUT PRINCIPAL */
+.painel-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #fafafa;
+}
+
+/* SIDEBAR – NÃO DEFINA WIDTH AQUI (sidebar controla sozinha) */
+.painel-layout > *:first-child {
+  flex-shrink: 0;
+}
+
+/* ÁREA DE CONTEÚDO */
+.painel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ÁREA DAS PÁGINAS */
+.painel-container {
+  flex: 1;
+
+  /* distância perfeita da sidebar */
+  padding: 32px 40px;
+  padding-left: 110px;
+
+  /* espaço para a topbar fixa */
+  padding-top: 120px !important;
+
+  box-sizing: border-box;
+}

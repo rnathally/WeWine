@@ -1,0 +1,342 @@
+:root {
+  --wine: #89154c;
+  --wine-light: #f8e9f1;
+
+  --green: #228048;
+  --green-light: #dff5ea;
+
+  --yellow: #eabd3c;
+  --yellow-light: #fff7d6;
+
+  --blue: #2b74b9;
+  --blue-light: #dff1ff;
+
+  --gray-light: #f8f3f6;
+  --gray-border: #e5dbe4;
+  --text: #38111f;
+  --muted: #867886;
+
+  --radius: 12px;
+}
+
+/* =============================================== */
+/*  CONTAINER PADRONIZADO (dashboard-wrapper)       */
+/* =============================================== */
+
+.pedidos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  padding-left: 50px;  /* mesmo espaçamento Vinhos/Clientes */
+  padding-top: 55px;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =============================================== */
+/*  TÍTULOS UNIFICADOS                              */
+/* =============================================== */
+
+.titulo {
+  font-size: 38px;          /* igual Dashboard */
+  font-weight: 700;         /* igual Dashboard */
+  color: #89154c;           /* igual Dashboard */
+  letter-spacing: -0.5px;   /* igual Dashboard */
+  margin: 0;                /* igual Dashboard */
+}
+
+.sub {
+  margin-top: 6px;
+  font-size: 1.04rem;       /* igual Dashboard */
+  color: #739d37;           /* igual Dashboard */
+  font-weight: 500;         /* igual Dashboard */
+  margin-bottom: 4px;       /* mesmo espaçamento das outras páginas */
+}
+
+/* =============================================== */
+/*  FILTROS                                          */
+/* =============================================== */
+
+.filtros-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+
+  padding: 14px 18px;
+  border: 1px solid var(--gray-border);
+  border-radius: 999px;
+  background: #fff;
+  margin-top: 8px;
+}
+
+.campo-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--gray-border);
+  background: var(--gray-light);
+}
+
+.campo-busca .ico {
+  color: var(--muted);
+}
+
+.campo-busca input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.campo-busca input:focus {
+  outline: none;
+}
+
+.filtros-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-filtros {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+
+  border-radius: 999px;
+  border: 1px solid var(--gray-border);
+  background: #fff;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn-filtros:hover {
+  background: #faf7fb;
+}
+
+/* =============================================== */
+/*  TABELA                                           */
+/* =============================================== */
+
+.tabela {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--gray-border);
+  background: #fff;
+  overflow: visible;
+}
+
+.tabela-header {
+  padding: 14px 20px;
+  background: var(--gray-light);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.tabela-header span {
+  display: flex;
+  align-items: center;
+}
+
+/* GRID da tabela (colunas) */
+.tabela-header,
+.tabela-linha {
+  display: grid;
+  grid-template-columns:
+    1fr       /* Pedido */
+    2fr       /* Cliente */
+    1.2fr     /* Data */
+    0.9fr     /* Itens */
+    1.8fr     /* Representante */
+    1.2fr     /* Pagamento */
+    1.2fr     /* Total */
+    1.2fr     /* Status */
+    0.8fr;    /* Ações */
+}
+
+.tabela-linha {
+  padding: 14px 20px;
+  align-items: center;
+  border-bottom: 1px solid #f3e9f1;
+  font-size: 14px;
+}
+
+.tabela-linha:hover {
+  background: #fafafa;
+}
+
+.id {
+  font-weight: 600;
+  color: var(--wine);
+}
+
+.icone-itens {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--wine);
+}
+
+.total {
+  font-weight: 600;
+  color: var(--wine);
+}
+
+/* =============================================== */
+/*  SELECT STATUS — COMO PÍLLULA COMPACTA           */
+/* =============================================== */
+
+.status-select-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ↓ Base do select */
+.tabela-linha .ds-select {
+  width: 130px !important;
+  min-width: 130px !important;
+  height: 26px !important;
+}
+
+/* ↓ Aparência da pílula */
+.tabela-linha .ds-select-display {
+  height: 26px !important;
+  padding: 0 12px !important;
+
+  border-radius: 999px !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 12.3px !important;
+  font-weight: 600 !important;
+
+  white-space: nowrap !important;
+}
+
+/* ↓ Remove seta */
+.tabela-linha .ds-select-arrow {
+  display: none !important;
+}
+
+/* ↓ Dropdown */
+.tabela-linha .ds-select-dropdown {
+  width: 130px !important;
+  min-width: 130px !important;
+  border-radius: 10px !important;
+  padding: 4px 0 !important;
+}
+
+.tabela-linha .ds-select-item {
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+}
+
+/* =============================================== */
+/*  CORES DOS STATUS (SUAVES E ELEGANTES)           */
+/* =============================================== */
+
+.status-select-col.status-emitido .ds-select-display {
+  background: #f2ecff !important;
+  color: #5d42c7 !important;
+}
+
+.status-select-col.status-processando .ds-select-display {
+  background: #fff5c7 !important;
+  color: #b58a00 !important;
+}
+
+.status-select-col.status-pendente .ds-select-display {
+  background: #ffeccc !important;
+  color: #c67d00 !important;
+}
+
+.status-select-col.status-transito .ds-select-display {
+  background: #dff1ff !important;
+  color: var(--blue) !important;
+}
+
+.status-select-col.status-faturado .ds-select-display {
+  background: #e8f7e9 !important;
+  color: var(--green) !important;
+}
+
+.status-select-col.status-cancelado .ds-select-display {
+  background: #ffe2e2 !important;
+  color: #d34646 !important;
+}
+
+/* =============================================== */
+/*  BOTÃO VER                                       */
+/* =============================================== */
+
+.btn-ver {
+  background: #f7f2f6;
+  border: 1px solid var(--gray-border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.btn-ver:hover {
+  background: #f2e7f0;
+}
+
+/* =============================================== */
+/*  PAGINAÇÃO                                       */
+/* =============================================== */
+
+.paginacao {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginacao .info {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.botoes-paginacao {
+  display: flex;
+  gap: 12px;
+}
+
+.botoes-paginacao button {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--gray-border);
+  background: white;
+  color: var(--wine);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botoes-paginacao button:hover:not(:disabled) {
+  background: var(--gray-light);
+}
+
+.botoes-paginacao button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

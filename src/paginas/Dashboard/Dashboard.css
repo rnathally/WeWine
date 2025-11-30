@@ -1,0 +1,335 @@
+.dashboard-wrapper {
+  padding: 1.5rem 2.5rem 2.5rem; /* top um pouco menor pra subir o conteúdo */
+  font-family: "Montserrat", sans-serif;
+  color: #303030;
+  background: #fafafa;
+}
+
+/* HEADER */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #89154c;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.dashboard-header p {
+  margin-top: 6px;
+  font-size: 1.04rem;
+  color: #739d37;
+  font-weight: 500;
+}
+
+/* KPIs */
+
+.kpis-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.kpi-card {
+  background: #ffffff;
+  padding: 1.6rem 1.5rem;
+  border-radius: 20px;
+
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.04),
+    0px 8px 20px rgba(0, 0, 0, 0.06);
+
+  transition: 0.25s ease;
+  animation: fadeUp 0.35s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+}
+
+.kpi-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kpi-card span {
+  font-size: 0.92rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.kpi-card h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #89154c;
+}
+
+/* Ícones dos KPIs */
+
+.kpi-card__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.kpi-card__icon--primary {
+  background: rgba(137, 21, 76, 0.1);
+  color: #89154c;
+}
+
+.kpi-card__icon--secondary {
+  background: rgba(34, 128, 72, 0.12);
+  color: #228048;
+}
+
+.kpi-card__icon--accent {
+  background: rgba(115, 157, 55, 0.12);
+  color: #739d37;
+}
+
+.kpi-card__icon--neutral {
+  background: rgba(188, 120, 108, 0.14);
+  color: #bc786c;
+}
+
+/* CARDS E GRÁFICOS */
+
+/* grade 2x2: 2 cards por linha */
+.charts-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card-bloco {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 22px;
+
+  box-shadow:
+    0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 10px 22px rgba(0, 0, 0, 0.07);
+
+  transition: 0.2s ease;
+  animation: fadeUp 0.35s ease;
+}
+
+.card-bloco:hover {
+  transform: translateY(-3px);
+}
+
+/* não “sobe” no hover (caso use em algum card) */
+.card-bloco--no-hover:hover {
+  transform: none;
+}
+
+/* título dos cards com ícone */
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-title__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(137, 21, 76, 0.08);
+  color: #89154c;
+  font-size: 1.1rem;
+}
+
+.card-bloco h3 {
+  font-size: 1.25rem;
+  color: #89154c;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+/* GRID INFERIOR */
+
+.bottom-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* card que ocupa a linha toda (Pedidos Recentes) */
+.bottom-full {
+  grid-column: span 2;
+}
+
+/* TABELAS */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+
+table th {
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 8px;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* STATUS DOS PEDIDOS */
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: #eaeaea;
+  color: #444;
+}
+
+.status-badge--success {
+  background: rgba(34, 128, 72, 0.12);
+  color: #228048;
+}
+
+.status-badge--warning {
+  background: rgba(188, 120, 108, 0.16);
+  color: #bc786c;
+}
+
+.status-badge--info {
+  background: rgba(115, 157, 55, 0.14);
+  color: #739d37;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+  .kpis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ainda 2 por linha nessa faixa de tela */
+  .charts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-full {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-wrapper {
+    padding: 1.4rem;
+  }
+
+  .kpis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr; /* 1 por linha no mobile */
+  }
+
+  .kpi-card {
+    padding: 1.4rem;
+  }
+
+  .card-bloco {
+    padding: 1.4rem;
+  }
+}
+
+/* ANIMAÇÃO SUAVE */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===== ESTOQUE BAIXO — estilo especial ===== */
+
+.estoque-card {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.estoque-card table {
+  font-size: 0.86rem;
+}
+
+.estoque-card thead th {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #999;
+  padding-bottom: 6px;
+}
+
+.estoque-card tbody tr {
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.estoque-card tbody tr:hover {
+  background: #faf5f7;                     /* rosê clarinho */
+  transform: translateY(-1px);
+}
+
+.estoque-card tbody td:first-child {
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+/* pill de quantidade */
+.estoque-qtd-pill {
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(188, 120, 108, 0.12);
+  color: #bc786c;
+}

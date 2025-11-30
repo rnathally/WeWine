@@ -1,0 +1,167 @@
+/* FUNDO COM DEGRADÊ */
+.login-container {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(135deg, #89154c, #3c0820, #12000a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.login-card {
+  width: 800px;
+  height: 520px;
+  background: #ffffff;
+  border-radius: 60px;
+
+  display: flex;
+  overflow: hidden;
+
+  box-shadow: 0px 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+/* ESQUERDA */
+.login-left {
+  flex: 1;
+  padding: 55px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #1c1c1c;
+}
+
+.subtitulo {
+  font-size: 15px;
+  color: #7a7a7a;
+  margin-bottom: 35px;
+}
+
+/* INPUTS */
+.campo {
+  width: 100%;
+  max-width: 330px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/* Input em si */
+.campo input {
+  box-sizing: border-box;
+  display: block;
+
+  width: 100%;
+  height: 44px;
+
+  padding: 0 40px;           /* espaço pros ícones dos dois lados */
+  background: #fff;
+
+  border: 1.5px solid #d8d8d8;
+  border-radius: 25px;
+
+  font-size: 14px;
+  color: #222;
+  outline: none;
+  transition: 0.2s;
+}
+
+.campo input:focus {
+  border-color: #89154c;
+  box-shadow: 0 0 4px rgba(137, 21, 76, 0.3);
+}
+
+.campo input::placeholder {
+  color: #999;
+}
+
+/* Ícones (esquerda e direita) */
+.icone-input,
+.icone-ver {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+
+  color: #999;
+}
+
+/* ícone do e-mail/cadeado */
+.icone-input {
+  left: 14px;
+  pointer-events: none;
+}
+
+/* ícone de ver senha */
+.icone-ver {
+  right: 14px;
+  cursor: pointer;
+}
+/* Esqueci a senha */
+.link-esqueceu {
+  font-size: 13px;
+  color: #89154c;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link-esqueceu:hover {
+  opacity: 0.7;
+}
+
+/* Botão LOGIN */
+.btn-login {
+  width: 330px;
+  height: 44px;
+
+  background: #89154c;
+  border: none;
+  color: #fff;
+
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #6f0f3d;
+}
+
+/* DIREITA */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-vinho {
+  width: 98%;
+  height: 94%;
+  border-radius: 60px;
+  margin-left: -30px;
+  object-fit: cover;
+}

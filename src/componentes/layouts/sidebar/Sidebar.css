@@ -1,0 +1,119 @@
+/* BARRA LATERAL EM FORMATO DE PÍLULA */
+.we-sidebar {
+  position: fixed;
+ left: 24px;         /* distância da borda esquerda */
+
+  /* ANTES: top: 24px;  -> bem colado no topo
+     Agora ele "desce" mais */
+    top: 70px;           /* ajusta esse valor se quiser mais pra baixo ou pra cima */
+
+  width: 70px;
+  height: 520px;
+
+  background: #89154c;
+  border-radius: 999px;
+
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* ANTES: space-between (espalhava logo, menu e footer)
+     Agora vamos controlar com margin auto no menu */
+  justify-content: flex-start;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  z-index: 20;
+
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* LOGO NO TOPO */
+.we-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px; /* só um espacinho abaixo da logo */
+}
+
+.we-logo img {
+  width: 38px;
+  height: auto;
+  display: block;
+}
+
+/* MENU DE ÍCONES NO MEIO (CENTRALIZADO VERTICALMENTE) */
+.we-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  /* Truque: essas margens auto empurram o menu pro centro da pílula */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* CADA ÍCONE (BOTÃO) */
+.we-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  background: transparent;
+  transition: 0.15s ease-in-out;
+}
+
+.we-item svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* HOVER */
+.we-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ESTADO ATIVO */
+.we-item.active,
+.we-item[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* RODAPÉ (BOTÃO SAIR) */
+.we-footer {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-size: 20px;
+  opacity: 0.9;
+
+  margin-top: auto;          /* garante que fique lá embaixo da pílula */
+  transition: 0.15s ease-in-out;
+}
+
+.we-footer:hover {
+  background: rgba(255, 255, 255, 0.18);
+  opacity: 1;
+}

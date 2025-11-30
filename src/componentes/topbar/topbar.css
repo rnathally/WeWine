@@ -1,0 +1,70 @@
+:root {
+  --primaria: #89154c;
+  --badge: #ff6b3d;
+}
+
+/* Container fixo no topo */
+.ww-topbar {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  z-index: 3000;
+}
+
+/* Texto "Search" com ícone */
+.ww-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+  color: #ffffffcc;
+  font-size: 15px;
+}
+
+.ww-search-icon {
+  color: #ffffffcc;
+}
+
+/* Notificação */
+.ww-bell {
+  width: 42px;
+  height: 42px;
+  background: var(--primaria);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  position: relative;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Badge  */
+.ww-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+
+  background: var(--badge);
+  color: white;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}

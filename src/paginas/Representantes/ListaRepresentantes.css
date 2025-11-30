@@ -1,0 +1,325 @@
+
+
+/* topo da página (título + botão novo) */
+.rep-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rep-top h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #89154c;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.rep-sub {
+  margin-top: 4px;
+  font-size: 0.98rem;
+  color: #739d37;
+  font-weight: 500;
+}
+
+/* botão "Novo Representante" */
+.btn-novo {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  background: #89154c;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(137, 21, 76, 0.25);
+  transition: background 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn-novo:hover {
+  background: #6f103e;
+  transform: translateY(-1px);
+}
+
+/* mensagem de erro */
+
+.erro-box {
+  margin-top: 1.4rem;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: #ffecec;
+  color: #9c2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.erro-box button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  background: #9c2b2b;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* GRID DE CARDS */
+
+.rep-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+/* CARD – igual vibe da imagem */
+
+.rep-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.7rem 1.6rem;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.04),
+    0px 9px 22px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rep-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0px 6px 14px rgba(0, 0, 0, 0.04),
+    0px 14px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* topo do card */
+
+.rep-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.rep-card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #89154c;
+}
+
+.rep-local {
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.86rem;
+  color: #777;
+}
+
+.rep-local svg {
+  font-size: 0.95rem;
+  color: #bc786c;
+}
+
+/* status ("Ativo") */
+
+.rep-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.rep-status svg {
+  font-size: 0.9rem;
+}
+
+.rep-status--ativo {
+  background: rgba(34, 128, 72, 0.12);
+  color: #228048;
+}
+
+.rep-status--inativo {
+  background: rgba(188, 120, 108, 0.14);
+  color: #bc786c;
+}
+
+/* contato (email e telefone) */
+
+.rep-contact {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rep-contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.rep-contact-line svg {
+  font-size: 1rem;
+  color: #bc786c;
+}
+
+/* bloco de métricas (23 clientes / vendas no mês) */
+
+.rep-metricas {
+  margin-top: 1.2rem;
+  background: #f6f6f6;
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.rep-metrica {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rep-metrica-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #89154c;
+}
+
+.rep-metrica-num--green {
+  color: #228048;
+}
+
+.rep-metrica-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* cidades de atuação */
+
+.rep-cidades {
+  margin-top: 1.2rem;
+}
+
+.rep-cidades-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.rep-chips {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.rep-chip {
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: #f6f6f6;
+  color: #6b6b6b;
+  border: 1px solid #e4d5da;
+}
+
+/* ações (Editar / Ver detalhes) */
+
+.rep-actions {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.rep-btn {
+  flex: 1;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: background 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease, color 0.18s ease;
+  font-family: inherit;
+}
+
+.rep-btn--ghost {
+  background: #f6f6f6;
+  color: #5b5b5b;
+}
+
+.rep-btn--ghost:hover {
+  background: #ececec;
+  transform: translateY(-1px);
+}
+
+.rep-btn--primary {
+  background: #89154c;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(137, 21, 76, 0.22);
+}
+
+.rep-btn--primary:hover {
+  background: #6f103e;
+  transform: translateY(-1px);
+}
+
+/* MODAIS (form / detalhes) */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+  .rep-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rep-actions {
+    flex-direction: column;
+  }
+
+  .rep-card {
+    padding: 1.4rem;
+  }
+}

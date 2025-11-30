@@ -1,0 +1,46 @@
+/* Fonte Google — combina muito com portais */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Remove qualquer foco/borda automática em SVGs dos gráficos */
+.recharts-wrapper svg,
+.recharts-surface,
+.recharts-surface > svg,
+.recharts-wrapper *,
+.recharts-surface * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Impede que SVG receba foco do mouse */
+.recharts-wrapper svg:focus,
+.recharts-surface:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Impedir foco por mouse/touch */
+.recharts-wrapper svg {
+  pointer-events: visiblePainted;
+}
+
+/* Remove highlight em navegação por teclado */
+:focus {
+  outline: none !important;
+}

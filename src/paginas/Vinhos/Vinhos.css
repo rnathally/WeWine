@@ -1,0 +1,361 @@
+:root {
+  --primaria: #89154c;
+  --primaria-hover: #6e0e3b;
+  --secundaria: #228048;
+  --meio: #739d37;
+  --borda: #e5d7dd;
+  --cinza-claro: #f7f7f7;
+  --cinza-texto: #6b6b6b;
+  --texto: #303030;
+  --radius: 20px;
+}
+
+/* ============================= */
+/*   CONTAINER (mesmo clima do dashboard) */
+/* ============================= */
+
+.vinhos-container {
+  /* dashboard-wrapper já dá o padding e background */
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--texto);
+}
+
+/* ============================= */
+/*           CABEÇALHO           */
+/* ============================= */
+
+.vinhos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.vinhos-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--primaria);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.vinhos-header p {
+  margin-top: 6px;
+  font-size: 1.04rem;
+  color: var(--meio); /* verdinho igual dashboard */
+  font-weight: 500;
+}
+
+/* Botão de adicionar */
+
+.btn-add {
+  background-color: var(--primaria);
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.06),
+    0px 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.btn-add:hover {
+  background-color: var(--primaria-hover);
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/*  BARRA DE BUSCA + VISUALIZAÇÃO */
+/* ============================= */
+
+.vinhos-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 12px 18px;
+  box-shadow:
+    0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 10px 22px rgba(0, 0, 0, 0.07);
+}
+
+.vinhos-toolbar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  background: #fafafa;
+  border-radius: 999px;
+  outline: none;
+  font-size: 0.92rem;
+  color: var(--texto);
+}
+
+.vinhos-toolbar input::placeholder {
+  color: var(--cinza-texto);
+  opacity: 0.8;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.view-buttons button {
+  border: 1px solid var(--borda);
+  background: #ffffff;
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.18s;
+  font-size: 16px;
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-buttons button:hover {
+  background: #fafafa;
+}
+
+.view-buttons button.ativo {
+  background-color: var(--primaria);
+  color: white;
+  border-color: var(--primaria);
+}
+
+/* ============================= */
+/*           TABELA              */
+/* ============================= */
+
+.tabela-vinhos {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  box-shadow:
+    0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 10px 22px rgba(0, 0, 0, 0.07);
+}
+
+.tabela-vinhos thead {
+  background: #faf7f8;
+}
+
+.tabela-vinhos th {
+  text-align: left;
+  padding: 13px 16px;
+  font-weight: 600;
+  color: #7a6c72;
+  border-bottom: 1px solid var(--borda);
+  font-size: 0.88rem;
+}
+
+.tabela-vinhos td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #f0e6ea;
+  vertical-align: middle;
+}
+
+.tabela-vinhos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela-vinhos td:first-child {
+  font-weight: 600;
+  color: var(--primaria);
+}
+
+/* coluna notas */
+.col-notas,
+.tabela-vinhos td:nth-child(6) {
+  color: var(--cinza-texto);
+  font-size: 0.86rem;
+}
+
+/* badge estoque */
+.badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.badge.ok {
+  background-color: #e4f5ea;
+  color: #228048;
+}
+
+.badge.baixa {
+  background-color: #fde8e8;
+  color: #d14242;
+}
+
+/* ============================= */
+/*           GRID                */
+/* ============================= */
+
+.vinhos-grid {
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.4rem;
+}
+
+.vinho-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.6rem 1.5rem;
+  box-shadow:
+    0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 10px 22px rgba(0, 0, 0, 0.07);
+  transition: 0.2s ease;
+}
+
+.vinho-card:hover {
+  transform: translateY(-3px);
+}
+
+.vinho-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primaria);
+}
+
+.vinho-card span {
+  font-size: 0.86rem;
+  color: var(--cinza-texto);
+}
+
+.vinho-card p {
+  font-size: 0.9rem;
+  color: var(--texto);
+  margin: 8px 0 0;
+}
+
+.vinho-card .preco {
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--primaria);
+}
+
+.vinho-card .notas {
+  font-size: 0.86rem;
+  color: var(--cinza-texto);
+  margin-top: 8px;
+}
+
+/* ============================= */
+/*     AÇÕES – EDITAR / EXCLUIR */
+/* ============================= */
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-acao {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: #faf7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eadfe4;
+  cursor: pointer;
+  transition: 0.18s;
+}
+
+.btn-acao svg {
+  stroke-width: 2;
+}
+
+/* Hover geral */
+.btn-acao:hover {
+  background: #f2e8eb;
+}
+
+/* Editar */
+.btn-acao.editar svg {
+  color: #89154c;
+}
+
+.btn-acao.editar:hover {
+  background: #f4e3ea;
+  border-color: #d7b4c1;
+}
+
+/* Excluir */
+.btn-acao.excluir svg {
+  color: #d64545;
+}
+
+.btn-acao.excluir:hover {
+  background: #ffecec;
+  border-color: #f2b6b6;
+}
+
+/* GRID – Botões alinhados no card */
+.acoes-grid {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ============================= */
+/*  RESPONSIVO                   */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .vinhos-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-add {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .vinhos-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .view-buttons {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .vinhos-container {
+    gap: 1.4rem;
+  }
+
+  .tabela-vinhos {
+    font-size: 0.85rem;
+  }
+
+  .tabela-vinhos th,
+  .tabela-vinhos td {
+    padding: 10px 12px;
+  }
+}
