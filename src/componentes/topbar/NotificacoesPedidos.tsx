@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./NotificacoesPedidos.css";
 
 interface Pedido {
@@ -13,9 +14,15 @@ interface Props {
 }
 
 export default function NotificacoesPedidos({ pedidos, fechar }: Props) {
+  const navigate = useNavigate();
+
+  function irParaPedidos() {
+    fechar();
+    navigate("/painel/pedidos");
+  }
+
   return (
     <div className="notif-mini">
-
       <div className="notif-mini-header">
         <h4>Pedidos Novos</h4>
         <button onClick={fechar}>×</button>
@@ -41,16 +48,11 @@ export default function NotificacoesPedidos({ pedidos, fechar }: Props) {
         ))}
       </div>
 
-      {/* BOTÃO PARA VER TODOS OS PEDIDOS */}
       <div className="notif-mini-footer">
-        <button
-          className="notif-mini-btn"
-          onClick={() => window.location.href = "/painel/vendas/pedidos"}
-        >
+        <button className="notif-mini-btn" onClick={irParaPedidos}>
           Ver todos os pedidos
         </button>
       </div>
-
     </div>
   );
 }
