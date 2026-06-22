@@ -41,7 +41,9 @@ export default function NotificacoesPedidos({ pedidos, fechar }: Props) {
             </div>
 
             <div className="notif-mini-info">
-              <span className="pedido-total">R$ {pedido.total}</span>
+              <span className="pedido-total">
+                R$ {pedido.total.toFixed(2)}
+              </span>
               <small>{pedido.data}</small>
             </div>
           </div>
