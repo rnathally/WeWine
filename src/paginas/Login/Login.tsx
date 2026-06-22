@@ -1,6 +1,6 @@
 import "./Login.css";
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
-import logo from "../../assets/imagens/logo.png";
+import logo from "../../assets/imagens/Logo.png";
 import imagemVinho from "../../assets/imagens/TelaLogin.png";
 import { useState, useContext } from "react";
 import type { FormEvent } from "react";
