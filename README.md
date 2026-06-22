@@ -1,77 +1,43 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
 # WeWine
->>>>>>> 775c0395a11daa81e74a1b24244482e610b7fb0d
+
+Sistema web administrativo desenvolvido como projeto da 5ª fase do curso de Ciência da Computação.
+
+O WeWine foi criado para simular a gestão de uma empresa do segmento de vinhos, permitindo o acompanhamento de pedidos, controle de estoque, organização de representantes e visualização de informações importantes para a administração do negócio.
+
+O sistema web faz parte de uma proposta integrada com um aplicativo mobile, onde os representantes poderiam visualizar a cartela de vinhos, consultar produtos disponíveis e realizar pedidos de forma prática.
+
+## Objetivo do projeto
+
+O objetivo do projeto foi desenvolver uma solução digital para melhorar a organização dos processos de venda de uma empresa de vinhos, conectando a gestão administrativa feita pelo sistema web com a operação de vendas realizada pelo aplicativo mobile.
+
+## Funcionalidades do sistema web
+
+* Tela de login
+* Dashboard administrativo
+* Acompanhamento de pedidos
+* Gestão de representantes
+* Controle de estoque de vinhos
+* Visualização e organização de produtos
+* Interface administrativa para apoio à gestão da empresa
+
+## Integração com aplicativo mobile
+
+O projeto foi pensado para funcionar em conjunto com um aplicativo mobile, onde os representantes teriam acesso à cartela de vinhos, poderiam consultar os produtos disponíveis e realizar pedidos diretamente pelo app.
+
+## Tecnologias utilizadas
+
+* React
+* TypeScript
+* Vite
+* CSS
+* React Router
+* React Icons
+
+## Acesso de demonstração
+
+E-mail: [admin@wewine.com](mailto:admin@wewine.com)
+Senha: 123456
+
+## Sobre o desenvolvimento
+
+Este projeto foi desenvolvido com foco em praticar desenvolvimento front-end, organização de rotas, criação de interfaces administrativas e estruturação de um sistema voltado para gestão empresarial.
